@@ -54,4 +54,4 @@ const print_bike = document.getElementById('print-bikes');
 
 const lighterBikeWeightKg = lighterBike.peso / 1000;
 print_bike.innerHTML = 
-  `<h5>La bici con peso minore è la "<span class="text-primary">${lighterBike.nome}</span>" con peso di <span class="text-primary">${lighterBikeWeightKg.toFixed(2)}</span>kg`;
+  `<h5>La bici con peso minore è la "<span class="text-primary">${lighterBike.nome}</span>" con un peso di <span class="text-primary">${lighterBikeWeightKg.toFixed(2)}</span>kg`;
