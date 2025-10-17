@@ -38,4 +38,9 @@ function getLighterWeight(arrayObj) {
   return lighterBike;
 }
 
-console.log(getLighterWeight(bici))
+const lighterBike = getLighterWeight(bici);
+
+const print_bike = document.getElementById('print-bikes');
+
+print_bike.innerHTML = 
+  `<h5>La bici con peso minore è la "<span class="text-primary">${lighterBike.nome}</span>" con peso di <span class="text-primary">${lighterBike.peso}</span> tonnellate`;
