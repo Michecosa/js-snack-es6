@@ -28,13 +28,14 @@ const bici = [
 ];
 
 function getLighterWeight(arrayObj) {
-  let lighterPosition = 0;
+  let lighterBike = arrayObj[0];
   for (let element in arrayObj) {
-    const weight = arrayObj[element]['peso'];
-    console.log(weight)
+    const bike = arrayObj[element];
+    if(bike['peso'] <= lighterBike['peso']) {
+      lighterBike = bike;
+    }
   }
-
-
+  return lighterBike;
 }
 
-getLighterWeight(bici)
+console.log(getLighterWeight(bici))
