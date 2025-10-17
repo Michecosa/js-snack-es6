@@ -27,6 +27,16 @@ const bici = [
   }
 ];
 
+function printAll(arrayObj) {
+  const print_all_bikes = document.getElementById('print-all-bikes');
+  for (let i = 0; i < arrayObj.length; i++) {
+    let li = document.createElement("li");
+    li.innerText = arrayObj[i].nome + " - Peso: " + (arrayObj[i].peso / 1000).toFixed(2) +"kg";
+    print_all_bikes.appendChild(li);
+  }
+}
+printAll(bici);
+
 function getLighterWeight(arrayObj) {
   let lighterBike = arrayObj[0];
   for (let element in arrayObj) {
