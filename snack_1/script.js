@@ -7,18 +7,34 @@
 const bici = [
   {
     'nome' : 'un nome bellissimo',
-    'peso' : 0
+    'peso' : 912
+  },
+  {
+    'nome' : 'un nome bellissimo',
+    'peso' : 90
+  },
+  {
+    'nome' : 'un nome bellissimo',
+    'peso' : 122
+  },
+  {
+    'nome' : 'un nome bellissimo',
+    'peso' : 132
   },
   {
     'nome' : 'un nome ancora più bello',
-    'peso' : 0
+    'peso' : 293
   }
 ];
 
-function getElements(arrayObj) {
+function getLighterWeight(arrayObj) {
+  let lighterPosition = 0;
   for (let element in arrayObj) {
-    console.log(arrayObj[element]);
+    const weight = arrayObj[element]['peso'];
+    console.log(weight)
   }
+
+
 }
 
-getElements(bici)
+getLighterWeight(bici)
