@@ -46,3 +46,16 @@ function getSquadreFalli(teams) {
 }
 getSquadreFalli(squadre);
 console.log(squadreFalli);
+
+
+
+function printAll(arrayObj) {
+  const squadre_falli = document.getElementById('squadre-falli');
+
+  for (let i = 0; i < arrayObj.length; i++) {
+    let li = document.createElement("li");
+    li.innerText = arrayObj[i]['nome'] + " - Falli subiti: " + arrayObj[i]['falli Subiti'];
+    squadre_falli.appendChild(li);
+  }
+}
+printAll(squadreFalli);
