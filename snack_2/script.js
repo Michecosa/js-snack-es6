@@ -10,12 +10,16 @@ const nomiSquadre = ["Napoli","Atlanta","Bologna","Cagliari","Corno","Cremonese"
 
 const squadre = [];
 
-for(let i = 0; i < nomiSquadre.length; i++) {
-  const squadra = {
-    nome: nomiSquadre[i],
-    puntiFatti: 0,
-    falliSubiti: 0
-  };
-  squadre.push(squadra);
+function getSquadre(nomi) {
+  for(let i = 0; i < nomi.length; i++) {
+    const squadra = {
+      nome: nomi[i],
+      puntiFatti: 0,
+      falliSubiti: 0
+    }
+    squadre.push(squadra);
+  }
 }
+
+getSquadre(nomiSquadre);
 console.log(squadre);
