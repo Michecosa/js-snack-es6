@@ -7,3 +7,15 @@ Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subit
 */
 
 const nomiSquadre = ["Napoli","Atlanta","Bologna","Cagliari","Corno","Cremonese","Fiorentina","Genoa","Inter","Juventus","Lazio","Lecce","Milan","Parma","Pisa","Roma","Sassuolo","Torino","Udinese","Verona"];
+
+const squadre = [];
+
+for(let i = 0; i < nomiSquadre.length; i++) {
+  const squadra = {
+    nome: nomiSquadre[i],
+    puntiFatti: 0,
+    falliSubiti: 0
+  };
+  squadre.push(squadra);
+}
+console.log(squadre);
