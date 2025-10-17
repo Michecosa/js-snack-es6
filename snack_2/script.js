@@ -24,16 +24,25 @@ function getSquadre(nomi) {
     squadre.push(squadra);
   }
 }
-
 getSquadre(nomiSquadre);
-console.log(squadre);
 
 function giveRandomNumber(teams) {
   for (let team in teams) {
     teams[team]['falli Subiti'] = getRndInteger(0,114);
     teams[team]['punti Fatti'] = getRndInteger(0,760);
-
-    console.log(teams[team]);
   }
 }
 giveRandomNumber(squadre);
+
+const squadreFalli = [];
+function getSquadreFalli(teams) {
+  for (let team in teams ) {
+    const saveValues = {
+      nome: teams[team].nome,
+      'falli Subiti': teams[team]['falli Subiti']
+    }
+    squadreFalli.push(saveValues);
+  }
+}
+getSquadreFalli(squadre);
+console.log(squadreFalli);
