@@ -6,24 +6,24 @@
 
 const bici = [
   {
-    'nome' : 'un nome bellissimo',
-    'peso' : 912
+    'nome': 'Bianchi Oltre XR4',
+    'peso': 8200 // peso in grammi (8,2 kg)
   },
   {
-    'nome' : 'un nome bellissimo',
-    'peso' : 90
+    'nome': 'Cannondale Synapse',
+    'peso': 9100
   },
   {
-    'nome' : 'un nome bellissimo',
-    'peso' : 122
+    'nome': 'Specialized Allez',
+    'peso': 7800
   },
   {
-    'nome' : 'un nome bellissimo',
-    'peso' : 132
+    'nome': 'Trek Domane',
+    'peso': 8500
   },
   {
-    'nome' : 'un nome ancora più bello',
-    'peso' : 293
+    'nome': 'Giant Defy Advanced',
+    'peso': 8300
   }
 ];
 
@@ -42,5 +42,6 @@ const lighterBike = getLighterWeight(bici);
 
 const print_bike = document.getElementById('print-bikes');
 
+const lighterBikeWeightKg = lighterBike.peso / 1000;
 print_bike.innerHTML = 
-  `<h5>La bici con peso minore è la "<span class="text-primary">${lighterBike.nome}</span>" con peso di <span class="text-primary">${lighterBike.peso}</span> tonnellate`;
+  `<h5>La bici con peso minore è la "<span class="text-primary">${lighterBike.nome}</span>" con peso di <span class="text-primary">${lighterBikeWeightKg.toFixed(2)}</span>kg`;
