@@ -13,5 +13,12 @@ const bici = [
     'nome' : 'un nome ancora più bello',
     'peso' : 0
   }
-  
-]
+];
+
+function getElements(arrayObj) {
+  for (let element in arrayObj) {
+    console.log(arrayObj[element]);
+  }
+}
+
+getElements(bici)
