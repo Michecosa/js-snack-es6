@@ -18,8 +18,8 @@ function getSquadre(nomi) {
   for(let i = 0; i < nomi.length; i++) {
     const squadra = {
       nome: nomi[i],
-      puntiFatti: 0,
-      falliSubiti: 0
+      'punti Fatti': 0,
+      'falli Subiti': 0
     }
     squadre.push(squadra);
   }
@@ -27,3 +27,13 @@ function getSquadre(nomi) {
 
 getSquadre(nomiSquadre);
 console.log(squadre);
+
+function giveRandomNumber(teams) {
+  for (let team in teams) {
+    teams[team]['falli Subiti'] = getRndInteger(0,114);
+    teams[team]['punti Fatti'] = getRndInteger(0,760);
+
+    console.log(teams[team]);
+  }
+}
+giveRandomNumber(squadre);
